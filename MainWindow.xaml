@@ -1,0 +1,26 @@
+﻿<Window x:Class="CountingHours.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CountingHours"
+        mc:Ignorable="d"
+        Title="Counting Hours for Jira" Height="254.266" Width="221.193" Background="#FF252526">
+    <Window.InputBindings>
+        <KeyBinding Command="{Binding AddTimeCommand}" Key="Enter"/>
+        <KeyBinding Command="{Binding ResetCommand}" Key="Escape"/>
+    </Window.InputBindings>
+    <Grid>
+        <TextBox x:Name="hours_start" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85" FontSize="31" TextAlignment="Center" Foreground="White" Background="#FF333337"/>
+        <TextBox x:Name="minutes_start" HorizontalAlignment="Left" Height="46" Margin="112,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83" FontSize="31" TextAlignment="Center" Background="#FF333337" Foreground="White"/>
+        <TextBox x:Name="hours_end" HorizontalAlignment="Left" Height="46" Margin="10,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="85" FontSize="31" TextAlignment="Center" Background="#FF333337" Foreground="White"/>
+        <TextBox x:Name="minutes_end" HorizontalAlignment="Left" Height="46" Margin="112,60,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="83" FontSize="31" TextAlignment="Center" Foreground="White" Background="#FF333337"/>
+        <Button x:Name="add_button" Content="Add" HorizontalAlignment="Left" Margin="10,111,0,0" VerticalAlignment="Top" Width="130" Height="61" Click="button_Click" FontSize="24" Background="#FF252526" Foreground="White"/>
+        <Button x:Name="clear_button" Content="clear" HorizontalAlignment="Left" Margin="145,111,0,0" VerticalAlignment="Top" Width="50" Height="61" Background="#FF252526" Foreground="White" Click="clear_button_Click"/>
+        <Label x:Name="label_colon1" Content=":" HorizontalAlignment="Left" Margin="95,14,0,0" VerticalAlignment="Top" Width="17" Foreground="White" FontSize="24"/>
+        <Label x:Name="label_colon2"  Content=":" HorizontalAlignment="Left" Margin="95,61,0,0" VerticalAlignment="Top" Width="17" Foreground="White" FontSize="24"/>
+        <TextBox x:Name="time" HorizontalAlignment="Left" Height="36" Margin="10,177,0,0" TextWrapping="Wrap" Text="10h 20m" VerticalAlignment="Top" Width="102" Background="#FF252526" Foreground="White" BorderBrush="#FF252526" FontSize="24"/>
+        <TextBox x:Name="new_time" HorizontalAlignment="Left" Height="36" Margin="117,177,0,0" TextWrapping="Wrap" Text="+ 10h 20m" VerticalAlignment="Top" Width="78" Background="#FF252526" Foreground="White" BorderBrush="#FF252526" FontSize="10"/>
+    </Grid>
+
+</Window>
