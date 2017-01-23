@@ -9,8 +9,9 @@ namespace CountingHours
     public partial class MainWindow
     {
         private DateTime Time { get; set; }
+
         private const string DefaultZeroTime = "0h 0m";
- 
+
         private void AddTimeGui(DateTime addedTime)
         {
             if (time.Text != DefaultZeroTime)
@@ -69,10 +70,13 @@ namespace CountingHours
             new_time.Text = "";
             Time = new DateTime();
         }
- 
+
         private void button_Click(object sender, RoutedEventArgs e) => AddTime();
+
         private void clear_button_Click(object sender, RoutedEventArgs e) => Reset();
+
         public ICommand AddTimeCommand => new ActionCommand(AddTime);
+
         public ICommand ResetCommand => new ActionCommand(Reset);
 
         public MainWindow()
